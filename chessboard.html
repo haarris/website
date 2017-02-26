@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Test</title>
+	<!-- -->
+</head>
+<body>
+<p>Click this button to build a chess board!</p>
+
+<p><button onclick="myChessBoard()">Build it!</button></p>
+
+<p id="demo"></p>
+<script>
+function myChessBoard() {
+  var i, j = 0;
+  var board = prompt("Size of board?", "Enter a number starting from 2");
+
+  var row1 = "\u00A0"; //make sure no space at end
+  var row2 = "#"; //make sure space at end
+
+  for (i=0; i < (board-1); i++){
+    if (i%2 === 1){
+      row1 = row1 + "\u00A0";    
+      row2 = row2 + "#";
+    }else if (i%2 === 0){
+      row1 = row1 + "#";
+      row2 = row2 + "\u00A0"; //unicode for nonbreaking literal    
+    }
+  }
+  //  document.write(row1 + "<br>");
+  //  document.write(row2 + "<br>");
+
+  for (i=0; i < board; i++){
+    if (i%2 === 0){
+      document.write(row1 + "<br>");
+    }else if (i%2 === 1){
+      document.write(row2 + "<br>");
+    }
+  }
+}
+</script></body>
+</html>
