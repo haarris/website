@@ -3,13 +3,7 @@
 <head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<title>Test</title>
 	<!-- -->
-</head>
-<body>
-<p>Click this button to build a chess board!</p>
 
-<p><button onclick="myChessBoard()">Build it!</button></p>
-
-<p id="demo"></p>
 <script>
 function myChessBoard() {
   var i, j = 0;
@@ -27,8 +21,6 @@ function myChessBoard() {
       row2 = row2 + "\u00A0"; //unicode for nonbreaking literal    
     }
   }
-  //  document.write(row1 + "<br>");
-  //  document.write(row2 + "<br>");
 
   for (i=0; i < board; i++){
     if (i%2 === 0){
@@ -38,5 +30,13 @@ function myChessBoard() {
     }
   }
 }
-</script></body>
+</script>
+
+</head>
+<body>
+<p>Click this button to build a chess board!</p>
+
+<p><button onclick="myChessBoard()">Build it!</button></p>
+
+</body>
 </html>
